@@ -1,0 +1,189 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box; 
+
+}
+div#allWrapper{
+    background-color: lighten($secondaryColor, 10%);
+}
+
+/*----------- BODY --------------*/
+body {
+    font-size: 16px;
+    font-family: 'Asap', sans-serif;
+}
+
+main{
+    background: $primaryColor;
+}
+main #textWrapper{
+    margin-bottom: -1rem;
+}
+.page{
+    background-color: #000;
+}
+
+/*----------- HEADER --------------*/
+header :not(main.headerImage){
+    padding: .5rem 2%;
+    background-color: $primaryColor;
+    margin: 0;
+}
+figure.logo img {
+    width: auto;
+    height: auto;
+    align-content: center;
+    float: left;
+    padding-right: 1rem;
+  }
+
+header h1 {margin: 0;}
+header h2 {margin: 0; font-weight: normal;}
+
+/*----------- NAVIGATION --------------*/
+nav {
+    background-color: darken($primaryColor, 45%);
+}
+
+nav ul li:first-child a {border-left: none;}
+
+nav ul li a:hover {
+    background-color: $fontColor;
+    color: $fontColor;
+}
+nav ul li.active a {
+    background-color: darken($primaryColor, 70%);
+    color: $fontColor;
+}
+
+
+
+////////
+nav { 
+    button{
+        padding: .5rem;
+        background-color: transparent;
+        border: none;
+        font-size: 1.5rem;
+        color: lighten($primaryColor, 25%);
+        }
+       
+        //toggle the hamburger menu and the close (X)
+        //hide one to show the other one, and when it is open, reverse them
+        button span:nth-child(1){display: block;}
+        button span:nth-child(2){display: none;}
+        button.classOpen span:nth-child(1){display:none} //dont show me the burger when it's open
+        button.classOpen span:nth-child(2){display: block;}//when it has a class of open, displays as a block
+        //end button
+
+    ul {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    }
+    ul.classOpen { //pulls from JavaScript
+        display: block; //opposite of none in ul{display:none}
+    }
+    ul li a {
+    display: block; //must be displayed as a block to apply padding
+    border-bottom: .1px solid #ffffffc7;
+    padding: .5rem 0;
+    font-size: .9rem;
+    padding-left: 1rem;
+    background-color: darken($primaryColor, 60%);
+    color: $fontColor;
+    text-decoration: none;
+    }
+
+    ul li a:hover {
+    background-color: lighten($primaryColor, 25%);
+    color: #333;
+
+    }
+}
+
+
+
+////////
+
+
+
+
+
+
+/*----------- MAIN --------------*/
+
+main{
+    h1{
+        padding: 0 2%;
+    }
+    h2{
+        padding: 0 4%;
+    }
+    p{
+        padding: 0 2%;
+    }
+    li{
+        padding: 0 4%;
+    }
+}
+main div.headerImage{
+    padding: 0%;
+    width: 100%;
+    contain: content;
+    max-width: 75rem;
+}
+main #Blueberry h2{
+    color: darken($primaryColor, 70%);
+    padding: 0 2%;
+}
+main #Strawberry h2{
+    color: #740909;
+    padding: 0 2%;
+}
+main #Apple h2{
+    color: #002409;
+}
+
+main ul li :not(main .startIngredient, main h2){
+    margin-left: 1rem;
+    padding: 0 2%;
+}
+main .HistoryImage img{
+    display: flex;
+    width: 50vw;
+    padding: 0;
+    margin-top: .5rem;
+    max-height:calc();
+    float: right;
+    max-width: 600px;
+    clear: both;
+    
+}
+/*----------- FOOTER --------------*/
+footer {
+    display: block;
+    text-align: center;
+    padding: 1rem 0;
+    color: lighten($secondaryColor, 30%);
+    max-width: 75rem;
+    bottom: 0;
+    position: relative;
+    width: 100%;
+    background-color: darken($primaryColor, 60%);
+
+}
+
+
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
