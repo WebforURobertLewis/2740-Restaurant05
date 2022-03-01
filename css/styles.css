@@ -412,9 +412,8 @@ main li {
 
 main div.headerImage {
   padding: 0%;
-  width: 100%;
   contain: content;
-  max-width: 75rem; }
+  height: auto; }
 
 main #Blueberry h2 {
   color: #002e4a;
@@ -436,7 +435,6 @@ main .HistoryImage img {
   width: 50vw;
   padding: 0;
   margin-top: .5rem;
-  max-height: calc();
   float: right;
   max-width: 600px;
   clear: both; }
