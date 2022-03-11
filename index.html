@@ -69,12 +69,13 @@
     <div id="textWrapper">
         <h1>Our History of Pies</h1>
 
-        <div id="Blueberry">
+        <picture id="Blueberry">
             <div class="HistoryImage">
-                <img src="/images/blueberryPie.jpg" alt="A Blueberry pie." sizes="50vw"
-                srcset="/images/blueb300.jpg 300w,
-                /images/blueb450.jpg 450w,
-                /images/blueb600.jpg 600w"></div>
+                <source media="(max-width: 300px)" srcset="/images/blueb300.jpg">
+                <source media="(max-width: 450px)" srcset="/images/blueb450.jpg">
+                <source media="(max-width: 600px)" srcset="/images/blueb600.jpg">
+                <img src="/images/blueberryPie.jpg" alt="A Blueberry pie.">
+            </picture>
         <h2>Poland - Blueberry Pie</h2>
         <p>Our increadible pies each have an amazing history! For instance, our coveted blueberry pie recipe came from
             Poland! A wonderful and well loved old lady passed away and left her secret recipe to her family. They then
@@ -127,11 +128,12 @@
 
         <div id="Strawberry">
         <h2>China - Strawberry Pie</h2>
-        <div class="HistoryImage">
-            <img src="/images/strawberryPie.jpg" alt="A Strawberry pie." sizes="50vw"
-            srcset="/images/straw300.jpg 300w,
-            /images/straw450.jpg 450w,
-            /images/straw600.jpg 600w"></div>
+        <picture class="HistoryImage">
+            <source media="(max-width: 300px)" srcset="images/straw300.jpg">
+            <source media="(max-width: 450px)" srcset="images/straw450.jpg">
+            <source media="(max-width: 600px)" srcset="images/straw600.jpg">
+            <img src="images/strawberryPie.jpg" alt="A Strawberry pie."> 
+        </picture>
         <p>What happens when you combine more than 100 years of strawberry growing experience with talented chefs? You get
             our mouth-watering Strawberry Pie! Recently, China has been known for it's strawberry growing industry, which
             means that with their vast quantity of straweberries and chefs, they have been able to create some increadible
@@ -174,9 +176,12 @@
 
         <div id="Apple">
         <h2>Scandinavia - Apple Pie</h2>
-        <div class="HistoryImage">
-        <img src="/images/applePie.jpg" alt="An apple pie." sizes="50vw"
-        srcset="/images/apple300.jpg 300w, /images/apple450.jpg 450w, /images/apple600.jpg 600w"></div>
+        <picture class="HistoryImage">
+            <source media="(max-width: 300px)" srcset="/images/apple300.jpg">
+            <source media="(max-width: 450px)" srcset="/images/apple450.jpg">
+            <source media="(max-width: 600px)" srcset="/images/apple600.jpg">
+        <img src="/images/applePie.jpg" alt="An apple pie.">
+        </picture>
         <p>Our increadible pies each have an amazing history! For instance, our coveted blueberry pie recipe came from
             Scandinavia! A wonderful and well loved old lady passed away and left her secret recipe to her family. They then
             sent the recipe to us! It has over 100 years of adjustment until the perfect combination of bluebrry and cream
