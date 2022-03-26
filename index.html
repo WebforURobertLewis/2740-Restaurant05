@@ -57,14 +57,15 @@
     
 <!-- CONTENT HERE -->
     <main>
-        <div class="headerImage">
-            <img src="/images/pie_header.jpg" alt="Apple pie" sizes="100vw" style="width: 100%;"
-            srcset="images/header1.jpg 450w,
-                    images/header2.jpg 600w,
-                    /images/header3.jpg 750w,
-                    /images/header4.jpg 900w, 
-                    /images/header5.jpg 1050w">
-        </div>
+
+ <picture class="headerImage">
+    <source media="(max-width: 450px)" srcset="images/header1.jpg">
+    <source media="(max-width: 650px)" srcset="images/header2.jpg">
+    <source media="(max-width: 750px)" srcset="/images/header3.jpg">
+    <source media="(max-width: 900px)" srcset="/images/header4.jpg">
+    <source media="(max-width: 1050px)" srcset="/images/header5.jpg">
+    <img src="/images/pie_header.jpg" alt="Apple Pie">
+ </picture>
 
     <div id="textWrapper">
         <h1>Our History of Pies</h1>

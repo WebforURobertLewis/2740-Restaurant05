@@ -410,10 +410,12 @@ main p {
 main li {
   padding: 0 4%; }
 
-main div.headerImage {
+main img {
   padding: 0%;
   contain: content;
-  height: auto; }
+  height: auto;
+  max-width: 75rem;
+  width: 100%; }
 
 main #Blueberry h2 {
   color: #002e4a;
